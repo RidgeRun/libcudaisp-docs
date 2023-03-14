@@ -75,9 +75,14 @@ $(function() {
 <div class="title">gstcudashift.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;gst/gst.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="gstcudashift_8hpp_source.html">gstcudashift.hpp</a>&gt;</code><br />
+<code>#include &lt;gst/gst.h&gt;</code><br />
 <code>#include &lt;gst/video/video.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="gstcudashift_8hpp_source.html">gstcudashift.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="gstcudatranslatebuffer_8hpp_source.html">gstcudatranslatebuffer.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="cudabufferparams_8hpp_source.html">libcudaisp/cudabufferparams.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ibackend_8hpp_source.html">libcudaisp/ibackend.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="shiftparams_8hpp_source.html">libcudaisp/shiftparams.hpp</a>&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -88,6 +93,12 @@ Classes</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:adef911caed7c65a1643062817f4a59d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#adef911caed7c65a1643062817f4a59d7">GST_CAT_DEFAULT</a>&#160;&#160;&#160;gst_cuda_shift_debug_category</td></tr>
 <tr class="separator:adef911caed7c65a1643062817f4a59d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d670e96a1ed2227841073aa99fb97b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#a74d670e96a1ed2227841073aa99fb97b">DEFAULT_PROP_SHIFT_MIN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a74d670e96a1ed2227841073aa99fb97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdab03e41e6a1f9008097dfd41aa13ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#afdab03e41e6a1f9008097dfd41aa13ad">DEFAULT_PROP_SHIFT_MAX</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:afdab03e41e6a1f9008097dfd41aa13ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4617909951af61e419f0720f1c3b05eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#a4617909951af61e419f0720f1c3b05eb">DEFAULT_PROP_SHIFT</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a4617909951af61e419f0720f1c3b05eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abba4370ce43d3d078e9696dbe9a409b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#abba4370ce43d3d078e9696dbe9a409b5">FORMAT_SINK_CAPS</a>(format)</td></tr>
 <tr class="separator:abba4370ce43d3d078e9696dbe9a409b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fe6996f2a5a55ccfc26079c4401eeae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudashift_8cpp.html#a8fe6996f2a5a55ccfc26079c4401eeae">FORMAT_SINK_CAPS_WITH_FEATURES</a>(features,  format)</td></tr>
@@ -109,7 +120,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="gstcudashift_8cpp.html#a99fb83031ce9923c84392b4e92f956b5ac37dda0da1a44e10c0504afeeb863f3c">PROP_0</a>
+<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="gstcudashift_8cpp.html#a99fb83031ce9923c84392b4e92f956b5ac37dda0da1a44e10c0504afeeb863f3c">PROP_0</a>, 
+<a class="el" href="gstcudashift_8cpp.html#a99fb83031ce9923c84392b4e92f956b5a0e75ef1b258f67cd0c72e1e2144a5bcf">PROP_SHIFT</a>
  }</td></tr>
 <tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -121,6 +133,48 @@ Functions</h2></td></tr>
 <tr class="separator:a643595dbedb365fc099f16baa473fd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4617909951af61e419f0720f1c3b05eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4617909951af61e419f0720f1c3b05eb">&#9670;&nbsp;</a></span>DEFAULT_PROP_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_PROP_SHIFT&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdab03e41e6a1f9008097dfd41aa13ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdab03e41e6a1f9008097dfd41aa13ad">&#9670;&nbsp;</a></span>DEFAULT_PROP_SHIFT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_PROP_SHIFT_MAX&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74d670e96a1ed2227841073aa99fb97b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d670e96a1ed2227841073aa99fb97b">&#9670;&nbsp;</a></span>DEFAULT_PROP_SHIFT_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEFAULT_PROP_SHIFT_MIN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9799c6f3f9ec665b6bf63f305b9dbcf9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9799c6f3f9ec665b6bf63f305b9dbcf9">&#9670;&nbsp;</a></span>FORMAT_CAPS_SINK</h2>
 
@@ -321,6 +375,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5ac37dda0da1a44e10c0504afeeb863f3c"></a>PROP_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a0e75ef1b258f67cd0c72e1e2144a5bcf"></a>PROP_SHIFT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -387,7 +442,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

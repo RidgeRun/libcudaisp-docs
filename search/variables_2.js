@@ -1,10 +1,25 @@
 var searchData=
 [
-  ['klutsize_362',['kLutSize',['../cudawhitebalancer_8cpp.html#a81853450ecb2d15c4c4d969983486378',1,'cudawhitebalancer.cpp']]],
-  ['klutstride_363',['kLutStride',['../cudawhitebalancer_8cpp.html#ac4e3c6cae5f020401ba24723cb0c99f4',1,'cudawhitebalancer.cpp']]],
-  ['kmaxplanes_364',['kMaxPlanes',['../classrr_1_1_buffer.html#aa006347e779b07ef7f2920f1e82c98f2',1,'rr::Buffer']]],
-  ['knumbgrchannels_365',['kNumBGRChannels',['../cudawhitebalancer_8cpp.html#a531cbd4903de4c278256e992a77ba74a',1,'cudawhitebalancer.cpp']]],
-  ['knumlutcolumns_366',['kNumLutColumns',['../cudawhitebalancer_8cpp.html#a9f89c8ce307b9e028b48a2de31d8d751',1,'cudawhitebalancer.cpp']]],
-  ['knumuint8values_367',['kNumUint8Values',['../cudawhitebalancer_8cpp.html#a51c8a21b9d4969510cb153af0b5d5cb7',1,'cudawhitebalancer.cpp']]],
-  ['ksumsize_368',['kSumSize',['../cudawhitebalancer_8cpp.html#a0a4418f9eace2ec445dacba58d86bfe4',1,'cudawhitebalancer.cpp']]]
+  ['input_402',['input',['../classrr_1_1_color_space_params.html#ab8ceeda4cbb5e8ad0e56606c2d510340',1,'rr::ColorSpaceParams']]],
+  ['input_5fis_5fbayerxx_403',['input_is_bayerxx',['../struct___gst_cuda_debayer.html#a8bb84d02db89b487981bb0ef7854dda4',1,'_GstCudaDebayer']]],
+  ['input_5fis_5fyuv_404',['input_is_yuv',['../struct___gst_cuda_awb.html#a34938d8328c69073e6f06e1dd9714c03',1,'_GstCudaAwb']]],
+  ['isp_5fbackend_405',['isp_backend',['../struct___gst_cuda_awb.html#aebc4fd0c889ef54c8ecb4a72e3f5c3c8',1,'_GstCudaAwb::isp_backend()'],['../struct___gst_cuda_debayer.html#a05cc670147c3613e0704d40d83b5968e',1,'_GstCudaDebayer::isp_backend()'],['../struct___gst_cuda_shift.html#a41fbb71fa3debc54f548d601cbe9422d',1,'_GstCudaShift::isp_backend()']]],
+  ['isp_5fcsc_406',['isp_csc',['../struct___gst_cuda_awb.html#a44c1eae1b5780e9891758c41a037b1b7',1,'_GstCudaAwb::isp_csc()'],['../struct___gst_cuda_debayer.html#ab7b80dc52679ebe408eed1fef7d88c31',1,'_GstCudaDebayer::isp_csc()']]],
+  ['isp_5fcsc_5fbuffer_407',['isp_csc_buffer',['../struct___gst_cuda_debayer.html#ac6988515b7a764d4ddc3d995fa2f8c70',1,'_GstCudaDebayer']]],
+  ['isp_5fcsc_5fbuffer_5fptr_408',['isp_csc_buffer_ptr',['../struct___gst_cuda_debayer.html#abfd279a12fda0777e76044e47b0af7ff',1,'_GstCudaDebayer']]],
+  ['isp_5fcsc_5fbuffer_5fsize_409',['isp_csc_buffer_size',['../struct___gst_cuda_awb.html#a0c130f8b53fe9b1f174906b52524e9ea',1,'_GstCudaAwb::isp_csc_buffer_size()'],['../struct___gst_cuda_debayer.html#abe942e529e84c5ef1afff5d4cca00009',1,'_GstCudaDebayer::isp_csc_buffer_size()']]],
+  ['isp_5fcsc_5finput_5fbuffer_410',['isp_csc_input_buffer',['../struct___gst_cuda_awb.html#a63dc0b395db84604dbbf72a79d5ce0c8',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5finput_5fbuffer_5fptr_411',['isp_csc_input_buffer_ptr',['../struct___gst_cuda_awb.html#a2949a002e51b1067e24c15ffcc112477',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5finput_5fparams_412',['isp_csc_input_params',['../struct___gst_cuda_awb.html#a7dec5b3638584d3f31d9448f12e0422b',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5foutput_5fbuffer_413',['isp_csc_output_buffer',['../struct___gst_cuda_awb.html#af68156298c8244380674c788d55e7ed1',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5foutput_5fbuffer_5fptr_414',['isp_csc_output_buffer_ptr',['../struct___gst_cuda_awb.html#ac826b787cab8d972c94abf60505836bb',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5foutput_5fparams_415',['isp_csc_output_params',['../struct___gst_cuda_awb.html#a193e5b7dfaf2566735f96d93eba3054d',1,'_GstCudaAwb']]],
+  ['isp_5fcsc_5fparams_416',['isp_csc_params',['../struct___gst_cuda_debayer.html#a06e175ca0c79f9344b5be6085e168dad',1,'_GstCudaDebayer']]],
+  ['isp_5fdebayer_417',['isp_debayer',['../struct___gst_cuda_debayer.html#a13547754113b8af2f04ebc2e8da7b42d',1,'_GstCudaDebayer']]],
+  ['isp_5fshift_418',['isp_shift',['../struct___gst_cuda_debayer.html#a4ec000296f39e31385d8505594d5e93a',1,'_GstCudaDebayer::isp_shift()'],['../struct___gst_cuda_shift.html#a05d398ae50ba551c3f841204ae1134df',1,'_GstCudaShift::isp_shift()']]],
+  ['isp_5fshift_5fbuffer_419',['isp_shift_buffer',['../struct___gst_cuda_debayer.html#abb0ace5373894cd04b2c77e2fe19b1c2',1,'_GstCudaDebayer']]],
+  ['isp_5fshift_5fbuffer_5fptr_420',['isp_shift_buffer_ptr',['../struct___gst_cuda_debayer.html#a898766c95fb508c802bb777f2aae4348',1,'_GstCudaDebayer']]],
+  ['isp_5fshift_5fbuffer_5fsize_421',['isp_shift_buffer_size',['../struct___gst_cuda_debayer.html#a7c4e17e39f5b0f34ab52351ae9432496',1,'_GstCudaDebayer']]],
+  ['isp_5fshift_5fparams_422',['isp_shift_params',['../struct___gst_cuda_debayer.html#ad85a755e7542ade8b6dde46da7f2653e',1,'_GstCudaDebayer']]],
+  ['isp_5fwhite_5fbalancer_423',['isp_white_balancer',['../struct___gst_cuda_awb.html#a3022e580bf57d0978951de530410a570',1,'_GstCudaAwb']]]
 ];

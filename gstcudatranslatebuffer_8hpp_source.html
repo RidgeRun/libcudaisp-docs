@@ -146,73 +146,85 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BGR:</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690abf1bf48de24838aef88bb42a6aa76f04">rr::Format::kBGR</a>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_BGGR:</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_RGGB:</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_GRBG:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_GBRG:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a47163f4ae03a7343747c9cb9f11a1437">rr::Format::kBayer8</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_BGGR:</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_RGGB:</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_GRBG:</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_GBRG:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a37fbf35ba1ff56b93856761e0972af01">rr::Format::kBayer10</a>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_BGGR:</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_RGGB:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_GRBG:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_GBRG:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690aa247438ed6cf6f3acc1fa8c0ed9da555">rr::Format::kBayer12</a>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_BGGR:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_RGGB:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_GRBG:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_GBRG:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a012340d8496a4a14a3226185b29ea533">rr::Format::kBayer14</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_BGGR:</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_RGGB:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_GRBG:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_GBRG:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a6e8fd70b1851c039a47988df9c0765f9">rr::Format::kBayer16</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a304d05f58828950f98914e0fb73607ba">rr::Format::kInvalidFormat</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> isp_format;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> GstObjPtr&gt;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> gboolean gst_cuda_translate_buffer(GstObjPtr elem,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                                 GstCudaData *gst_buffer,</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                                 <a class="code" href="classrr_1_1_buffer.html">rr::Buffer</a> *isp_buffer) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  g_return_val_if_fail(elem, FALSE);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  g_return_val_if_fail(gst_buffer, FALSE);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  g_return_val_if_fail(isp_buffer, FALSE);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690">rr::Format</a> format =</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      gst_cuda_translate_buffer_format(gst_buffer-&gt;format);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> planes = gst_buffer-&gt;num_planes;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  std::array&lt;int, rr::Buffer::kMaxPlanes&gt; strides = {0, 0, 0, 0};</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> width = gst_buffer-&gt;channels[0].width;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> height = gst_buffer-&gt;channels[0].height;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; planes; ++i) {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    strides[i] = gst_buffer-&gt;channels[i].pitch;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  isp_buffer-&gt;<a class="code" href="classrr_1_1_buffer.html#a36893fba9dc376e05f841fd6d2d62005">SetBufferInfo</a>(format, planes, strides, width, height);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">return</span> TRUE;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_RGB:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a6e94255c2d60c849b6f24ad631bb2613">rr::Format::kRGB</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_BGGR:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_RGGB:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_GRBG:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER_GBRG:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a47163f4ae03a7343747c9cb9f11a1437">rr::Format::kBayer8</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_BGGR:</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_RGGB:</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_GRBG:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER10_GBRG:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a37fbf35ba1ff56b93856761e0972af01">rr::Format::kBayer10</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_BGGR:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_RGGB:</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_GRBG:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER12_GBRG:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690aa247438ed6cf6f3acc1fa8c0ed9da555">rr::Format::kBayer12</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_BGGR:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_RGGB:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_GRBG:</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER14_GBRG:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a012340d8496a4a14a3226185b29ea533">rr::Format::kBayer14</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_BGGR:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_RGGB:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_GRBG:</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">case</span> GST_CUDA_BAYER16_GBRG:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a6e8fd70b1851c039a47988df9c0765f9">rr::Format::kBayer16</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      isp_format = <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a304d05f58828950f98914e0fb73607ba">rr::Format::kInvalidFormat</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">return</span> isp_format;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> GstObjPtr&gt;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> gboolean gst_cuda_translate_buffer(GstObjPtr elem,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                 GstCudaData *gst_buffer,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                 <a class="code" href="classrr_1_1_buffer.html">rr::Buffer</a> *isp_buffer) {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  g_return_val_if_fail(elem, FALSE);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  g_return_val_if_fail(gst_buffer, FALSE);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  g_return_val_if_fail(isp_buffer, FALSE);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> isp_ret{};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690">rr::Format</a> format =</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      gst_cuda_translate_buffer_format(gst_buffer-&gt;format);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> planes = gst_buffer-&gt;num_planes;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  std::array&lt;int, rr::Buffer::kMaxPlanes&gt; strides = {0, 0, 0, 0};</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> width = gst_buffer-&gt;channels[0].width;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">int</span> height = gst_buffer-&gt;channels[0].height;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; planes; ++i) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    strides[i] = gst_buffer-&gt;channels[i].pitch;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RR_GST_GSTCUDATRANSLATEBUFFER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  isp_ret = isp_buffer-&gt;<a class="code" href="classrr_1_1_buffer.html#a36893fba9dc376e05f841fd6d2d62005">SetBufferInfo</a>(format, planes, strides, width, height);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordflow">if</span> (isp_ret.IsError()) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    GST_ERROR_OBJECT(elem, <span class="stringliteral">&quot;SetBufferInfo returned error: %s&quot;</span>,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                     isp_ret.GetDescription().c_str());</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span> FALSE;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">return</span> TRUE;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RR_GST_GSTCUDATRANSLATEBUFFER_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassrr_1_1_buffer_html"><div class="ttname"><a href="classrr_1_1_buffer.html">rr::Buffer</a></div><div class="ttdoc">This class contains data containers.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:33</div></div>
 <div class="ttc" id="adebayerparams_8hpp_html"><div class="ttname"><a href="debayerparams_8hpp.html">debayerparams.hpp</a></div></div>
 <div class="ttc" id="anamespacerr_html_a05bc1f95198518551bf0ad21b4b0c690a012340d8496a4a14a3226185b29ea533"><div class="ttname"><a href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a012340d8496a4a14a3226185b29ea533">rr::Format::kBayer14</a></div><div class="ttdeci">@ kBayer14</div><div class="ttdoc">Bayer14 image format.</div></div>
 <div class="ttc" id="anamespacerr_html_a05bc1f95198518551bf0ad21b4b0c690a304d05f58828950f98914e0fb73607ba"><div class="ttname"><a href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a304d05f58828950f98914e0fb73607ba">rr::Format::kInvalidFormat</a></div><div class="ttdeci">@ kInvalidFormat</div><div class="ttdoc">Invalid image format indicator.</div></div>
-<div class="ttc" id="aclassrr_1_1_buffer_html_a36893fba9dc376e05f841fd6d2d62005"><div class="ttname"><a href="classrr_1_1_buffer.html#a36893fba9dc376e05f841fd6d2d62005">rr::Buffer::SetBufferInfo</a></div><div class="ttdeci">virtual RuntimeError SetBufferInfo(const Format format, const int planes, const std::array&lt; int, Buffer::kMaxPlanes &gt; strides, const int width, const int height)</div><div class="ttdoc">Sets general buffer information.</div><div class="ttdef"><b>Definition:</b> buffer.cpp:74</div></div>
+<div class="ttc" id="aclassrr_1_1_buffer_html_a36893fba9dc376e05f841fd6d2d62005"><div class="ttname"><a href="classrr_1_1_buffer.html#a36893fba9dc376e05f841fd6d2d62005">rr::Buffer::SetBufferInfo</a></div><div class="ttdeci">virtual RuntimeError SetBufferInfo(const Format format, const int planes, const std::array&lt; int, Buffer::kMaxPlanes &gt; strides, const int width, const int height)</div><div class="ttdoc">Sets general buffer information.</div><div class="ttdef"><b>Definition:</b> buffer.cpp:112</div></div>
+<div class="ttc" id="anamespacerr_html_a05bc1f95198518551bf0ad21b4b0c690a6e94255c2d60c849b6f24ad631bb2613"><div class="ttname"><a href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a6e94255c2d60c849b6f24ad631bb2613">rr::Format::kRGB</a></div><div class="ttdeci">@ kRGB</div><div class="ttdoc">RGB image format.</div></div>
+<div class="ttc" id="aclassrr_1_1_runtime_error_html"><div class="ttname"><a href="classrr_1_1_runtime_error.html">rr::RuntimeError</a></div><div class="ttdoc">Implements the error handling class.</div><div class="ttdef"><b>Definition:</b> runtimeerror.hpp:27</div></div>
 <div class="ttc" id="anamespacerr_html_a05bc1f95198518551bf0ad21b4b0c690a37fbf35ba1ff56b93856761e0972af01"><div class="ttname"><a href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690a37fbf35ba1ff56b93856761e0972af01">rr::Format::kBayer10</a></div><div class="ttdeci">@ kBayer10</div><div class="ttdoc">Bayer10 image format.</div></div>
 <div class="ttc" id="aclassrr_1_1_debayer_params_html_ad4af85f8ccb727ef7c18ad354c675a65aae862bfeb53dac4f3e1622058bd3cf8d"><div class="ttname"><a href="classrr_1_1_debayer_params.html#ad4af85f8ccb727ef7c18ad354c675a65aae862bfeb53dac4f3e1622058bd3cf8d">rr::DebayerParams::kGBRG</a></div><div class="ttdeci">@ kGBRG</div><div class="ttdef"><b>Definition:</b> debayerparams.hpp:32</div></div>
 <div class="ttc" id="anamespacerr_html_a05bc1f95198518551bf0ad21b4b0c690abf1bf48de24838aef88bb42a6aa76f04"><div class="ttname"><a href="namespacerr.html#a05bc1f95198518551bf0ad21b4b0c690abf1bf48de24838aef88bb42a6aa76f04">rr::Format::kBGR</a></div><div class="ttdeci">@ kBGR</div><div class="ttdoc">BGR image format.</div></div>
@@ -228,7 +240,7 @@ $(function() {
 <div class="ttc" id="aclassrr_1_1_debayer_params_html_ad4af85f8ccb727ef7c18ad354c675a65a9c397f66f7ec22b097e9c43f11d13447"><div class="ttname"><a href="classrr_1_1_debayer_params.html#ad4af85f8ccb727ef7c18ad354c675a65a9c397f66f7ec22b097e9c43f11d13447">rr::DebayerParams::kRGGB</a></div><div class="ttdeci">@ kRGGB</div><div class="ttdef"><b>Definition:</b> debayerparams.hpp:32</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -93,41 +93,41 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerr.html">rr</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_shift.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_shift.html">CudaShift</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_shift.html#aa5ed1f1a948aad2ee1c0445c6df2bf93">CudaShift</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_shift.html#a8cd13131b6e90c1281ee69fdeca6cb4e">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_shift.html#a309b379b38ae9064ab37a574fab69863">Synchronize</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">   * @brief Destroy the CudaShift object.</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_shift.html#a16a0fe0c0207c704565984c77792c876">~CudaShift</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  Npp16u* buffer16_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">size_t</span> buffer16_size_;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateBuffer16(<span class="keyword">const</span> <span class="keywordtype">size_t</span> input_size);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}  <span class="comment">// namespace rr</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif  // RR_INCLUDE_LIBCUDAISP_CUDASHIFT_HPP_</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_shift.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_shift.html">CudaShift</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_shift.html#aa5ed1f1a948aad2ee1c0445c6df2bf93">CudaShift</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_shift.html#a8cd13131b6e90c1281ee69fdeca6cb4e">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_shift.html#a309b379b38ae9064ab37a574fab69863">Synchronize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">   * @brief Destroy the CudaShift object.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_shift.html#a16a0fe0c0207c704565984c77792c876">~CudaShift</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  Npp16u* buffer16_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">size_t</span> buffer16_size_;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateBuffer16(<span class="keyword">const</span> <span class="keywordtype">size_t</span> input_size);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace rr</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif  // RR_INCLUDE_LIBCUDAISP_CUDASHIFT_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassrr_1_1_buffer_html"><div class="ttname"><a href="classrr_1_1_buffer.html">rr::Buffer</a></div><div class="ttdoc">This class contains data containers.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:33</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_shift_html_a8cd13131b6e90c1281ee69fdeca6cb4e"><div class="ttname"><a href="classrr_1_1_cuda_shift.html#a8cd13131b6e90c1281ee69fdeca6cb4e">rr::CudaShift::Apply</a></div><div class="ttdeci">rr::RuntimeError Apply(const Buffer *input_buffer, Buffer *output_buffer, const std::shared_ptr&lt; IParams &gt; params, bool async=false) override</div><div class="ttdoc">This method applies the CudaShift algorithm to the input buffer and modifies the output buffer.</div><div class="ttdef"><b>Definition:</b> cudashift.cpp:64</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_shift_html_a16a0fe0c0207c704565984c77792c876"><div class="ttname"><a href="classrr_1_1_cuda_shift.html#a16a0fe0c0207c704565984c77792c876">rr::CudaShift::~CudaShift</a></div><div class="ttdeci">virtual ~CudaShift()</div><div class="ttdef"><b>Definition:</b> cudashift.cpp:27</div></div>
 <div class="ttc" id="aialgorithm_8hpp_html"><div class="ttname"><a href="ialgorithm_8hpp.html">ialgorithm.hpp</a></div></div>
-<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:52</div></div>
+<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:54</div></div>
 <div class="ttc" id="aclassrr_1_1_runtime_error_html"><div class="ttname"><a href="classrr_1_1_runtime_error.html">rr::RuntimeError</a></div><div class="ttdoc">Implements the error handling class.</div><div class="ttdef"><b>Definition:</b> runtimeerror.hpp:27</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_shift_html_a309b379b38ae9064ab37a574fab69863"><div class="ttname"><a href="classrr_1_1_cuda_shift.html#a309b379b38ae9064ab37a574fab69863">rr::CudaShift::Synchronize</a></div><div class="ttdeci">rr::RuntimeError Synchronize() override</div><div class="ttdoc">This method syncrhonizes the execution of the CudaShift algorithm.</div><div class="ttdef"><b>Definition:</b> cudashift.cpp:34</div></div>
 <div class="ttc" id="anamespacerr_html"><div class="ttname"><a href="namespacerr.html">rr</a></div><div class="ttdoc">RR Namespace.</div><div class="ttdef"><b>Definition:</b> runtimeerror.cpp:16</div></div>
-<div class="ttc" id="aclassrr_1_1_cuda_shift_html"><div class="ttname"><a href="classrr_1_1_cuda_shift.html">rr::CudaShift</a></div><div class="ttdoc">This class is in charge of the CudaShift algorithm.</div><div class="ttdef"><b>Definition:</b> cudashift.hpp:34</div></div>
+<div class="ttc" id="aclassrr_1_1_cuda_shift_html"><div class="ttname"><a href="classrr_1_1_cuda_shift.html">rr::CudaShift</a></div><div class="ttdoc">This class is in charge of the Shift algorithm usind CUDA.</div><div class="ttdef"><b>Definition:</b> cudashift.hpp:37</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_shift_html_aa5ed1f1a948aad2ee1c0445c6df2bf93"><div class="ttname"><a href="classrr_1_1_cuda_shift.html#aa5ed1f1a948aad2ee1c0445c6df2bf93">rr::CudaShift::CudaShift</a></div><div class="ttdeci">CudaShift(const std::shared_ptr&lt; ISettings &gt; settings)</div><div class="ttdoc">Construct a new CudaShift instance.</div><div class="ttdef"><b>Definition:</b> cudashift.cpp:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

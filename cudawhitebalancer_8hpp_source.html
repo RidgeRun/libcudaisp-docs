@@ -93,38 +93,38 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerr.html">rr</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_white_balancer.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_white_balancer.html">CudaWhiteBalancer</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a8e4f68dca09d4c98aae9f1686f6716eb">CudaWhiteBalancer</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a2fa0cee29229a6a9935488534819fa0b">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a> *input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a> *output_buffer,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a24751f6093374611b04aa44efed7f6ac">Synchronize</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">   * @brief Destroy the CudaWhiteBalancer object.</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a540d0a5d351a5c7cd376844f75c859bb">~CudaWhiteBalancer</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  Npp8u *scratch_buffer_;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">int</span> scratch_buffer_size_;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  NppiSize frame_size_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  Npp64f *sums_device_;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  Npp64f *sums_host_;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  Npp32s *lut_device_;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  Npp32s *lut_host_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateSumAndLutBuffers();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateScratchBuffer(NppiSize input_size);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">/* namespace rr */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RR_INCLUDE_LIBCUDAISP_CUDAWHITEBALANCER_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_white_balancer.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_white_balancer.html">CudaWhiteBalancer</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a8e4f68dca09d4c98aae9f1686f6716eb">CudaWhiteBalancer</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a2fa0cee29229a6a9935488534819fa0b">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a> *input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a> *output_buffer,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a24751f6093374611b04aa44efed7f6ac">Synchronize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   * @brief Destroy the CudaWhiteBalancer object.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_white_balancer.html#a540d0a5d351a5c7cd376844f75c859bb">~CudaWhiteBalancer</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  Npp8u *scratch_buffer_;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">int</span> scratch_buffer_size_;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  NppiSize frame_size_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  Npp64f *sums_device_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  Npp64f *sums_host_;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  Npp32s *lut_device_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  Npp32s *lut_host_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateSumAndLutBuffers();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> AllocateScratchBuffer(NppiSize input_size);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} <span class="comment">/* namespace rr */</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* RR_INCLUDE_LIBCUDAISP_CUDAWHITEBALANCER_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassrr_1_1_cuda_white_balancer_html"><div class="ttname"><a href="classrr_1_1_cuda_white_balancer.html">rr::CudaWhiteBalancer</a></div><div class="ttdoc">This class is in charge of the CudaWhiteBalancer algorithm.</div><div class="ttdef"><b>Definition:</b> cudawhitebalancer.hpp:35</div></div>
+<div class="ttc" id="aclassrr_1_1_cuda_white_balancer_html"><div class="ttname"><a href="classrr_1_1_cuda_white_balancer.html">rr::CudaWhiteBalancer</a></div><div class="ttdoc">This class is in charge of the White Balancer algorithm using CUDA.</div><div class="ttdef"><b>Definition:</b> cudawhitebalancer.hpp:38</div></div>
 <div class="ttc" id="aclassrr_1_1_buffer_html"><div class="ttname"><a href="classrr_1_1_buffer.html">rr::Buffer</a></div><div class="ttdoc">This class contains data containers.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:33</div></div>
 <div class="ttc" id="aialgorithm_8hpp_html"><div class="ttname"><a href="ialgorithm_8hpp.html">ialgorithm.hpp</a></div></div>
-<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:52</div></div>
+<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:54</div></div>
 <div class="ttc" id="aclassrr_1_1_runtime_error_html"><div class="ttname"><a href="classrr_1_1_runtime_error.html">rr::RuntimeError</a></div><div class="ttdoc">Implements the error handling class.</div><div class="ttdef"><b>Definition:</b> runtimeerror.hpp:27</div></div>
 <div class="ttc" id="anamespacerr_html"><div class="ttname"><a href="namespacerr.html">rr</a></div><div class="ttdoc">RR Namespace.</div><div class="ttdef"><b>Definition:</b> runtimeerror.cpp:16</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_white_balancer_html_a540d0a5d351a5c7cd376844f75c859bb"><div class="ttname"><a href="classrr_1_1_cuda_white_balancer.html#a540d0a5d351a5c7cd376844f75c859bb">rr::CudaWhiteBalancer::~CudaWhiteBalancer</a></div><div class="ttdeci">virtual ~CudaWhiteBalancer()</div><div class="ttdef"><b>Definition:</b> cudawhitebalancer.cpp:45</div></div>
@@ -133,7 +133,7 @@ $(function() {
 <div class="ttc" id="aclassrr_1_1_cuda_white_balancer_html_a24751f6093374611b04aa44efed7f6ac"><div class="ttname"><a href="classrr_1_1_cuda_white_balancer.html#a24751f6093374611b04aa44efed7f6ac">rr::CudaWhiteBalancer::Synchronize</a></div><div class="ttdeci">rr::RuntimeError Synchronize() override</div><div class="ttdoc">This method syncrhonizes the execution of the white balancing algorithm.</div><div class="ttdef"><b>Definition:</b> cudawhitebalancer.cpp:68</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

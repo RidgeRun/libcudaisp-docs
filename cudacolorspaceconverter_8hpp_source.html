@@ -93,34 +93,34 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerr.html">rr</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_color_space_converter.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_color_space_converter.html">CudaColorSpaceConverter</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a90730cce254f7a39c4e92653208e525b">CudaColorSpaceConverter</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a0bb83fab675232372360df52c6e54f35">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#acba91c2136d691718daedc5d2631b459">Synchronize</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">/*</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">   * @brief Destroy the CudaColorSpaceConverter object.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a6d16802890bf947f77d688bf1e27caa9">~CudaColorSpaceConverter</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> ConvertRGBToI420(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                    <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> ConvertI420ToRGB(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                    <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}  <span class="comment">// namespace rr</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif  // RR_INCLUDE_LIBCUDAISP_CUDACOLORSPACECONVERTER_HPP_</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classrr_1_1_cuda_color_space_converter.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrr_1_1_cuda_color_space_converter.html">CudaColorSpaceConverter</a> : <span class="keyword">public</span> <a class="code" href="classrr_1_1_i_algorithm.html">IAlgorithm</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a90730cce254f7a39c4e92653208e525b">CudaColorSpaceConverter</a>(<span class="keyword">const</span> std::shared_ptr&lt;ISettings&gt; settings);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a0bb83fab675232372360df52c6e54f35">Apply</a>(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer, <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                         <span class="keyword">const</span> std::shared_ptr&lt;IParams&gt; params,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                         <span class="keywordtype">bool</span> async = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#acba91c2136d691718daedc5d2631b459">Synchronize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">/*</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">   * @brief Destroy the CudaColorSpaceConverter object.</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">   */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classrr_1_1_cuda_color_space_converter.html#a6d16802890bf947f77d688bf1e27caa9">~CudaColorSpaceConverter</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> ConvertRGBToI420(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                    <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <a class="code" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a> ConvertI420ToRGB(<span class="keyword">const</span> <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* input_buffer,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                    <a class="code" href="classrr_1_1_buffer.html">Buffer</a>* output_buffer);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace rr</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif  // RR_INCLUDE_LIBCUDAISP_CUDACOLORSPACECONVERTER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassrr_1_1_buffer_html"><div class="ttname"><a href="classrr_1_1_buffer.html">rr::Buffer</a></div><div class="ttdoc">This class contains data containers.</div><div class="ttdef"><b>Definition:</b> buffer.hpp:33</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_color_space_converter_html_a0bb83fab675232372360df52c6e54f35"><div class="ttname"><a href="classrr_1_1_cuda_color_space_converter.html#a0bb83fab675232372360df52c6e54f35">rr::CudaColorSpaceConverter::Apply</a></div><div class="ttdeci">rr::RuntimeError Apply(const Buffer *input_buffer, Buffer *output_buffer, const std::shared_ptr&lt; IParams &gt; params, bool async=false) override</div><div class="ttdoc">This method applies the CudaColorSpaceConverter algorithm to the input buffer and modifies the output...</div><div class="ttdef"><b>Definition:</b> cudacolorspaceconverter.cpp:35</div></div>
-<div class="ttc" id="aclassrr_1_1_cuda_color_space_converter_html"><div class="ttname"><a href="classrr_1_1_cuda_color_space_converter.html">rr::CudaColorSpaceConverter</a></div><div class="ttdoc">This class is in charge of the CudaColorSpaceConverter algorithm.</div><div class="ttdef"><b>Definition:</b> cudacolorspaceconverter.hpp:32</div></div>
+<div class="ttc" id="aclassrr_1_1_cuda_color_space_converter_html"><div class="ttname"><a href="classrr_1_1_cuda_color_space_converter.html">rr::CudaColorSpaceConverter</a></div><div class="ttdoc">This class is in charge of the ColorSpaceConverter algorithm using CUDA.</div><div class="ttdef"><b>Definition:</b> cudacolorspaceconverter.hpp:35</div></div>
 <div class="ttc" id="aialgorithm_8hpp_html"><div class="ttname"><a href="ialgorithm_8hpp.html">ialgorithm.hpp</a></div></div>
-<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:52</div></div>
+<div class="ttc" id="aclassrr_1_1_i_algorithm_html"><div class="ttname"><a href="classrr_1_1_i_algorithm.html">rr::IAlgorithm</a></div><div class="ttdoc">This interface provides a way to apply algorithms to an image.</div><div class="ttdef"><b>Definition:</b> ialgorithm.hpp:54</div></div>
 <div class="ttc" id="aclassrr_1_1_runtime_error_html"><div class="ttname"><a href="classrr_1_1_runtime_error.html">rr::RuntimeError</a></div><div class="ttdoc">Implements the error handling class.</div><div class="ttdef"><b>Definition:</b> runtimeerror.hpp:27</div></div>
 <div class="ttc" id="anamespacerr_html"><div class="ttname"><a href="namespacerr.html">rr</a></div><div class="ttdoc">RR Namespace.</div><div class="ttdef"><b>Definition:</b> runtimeerror.cpp:16</div></div>
 <div class="ttc" id="aclassrr_1_1_cuda_color_space_converter_html_a6d16802890bf947f77d688bf1e27caa9"><div class="ttname"><a href="classrr_1_1_cuda_color_space_converter.html#a6d16802890bf947f77d688bf1e27caa9">rr::CudaColorSpaceConverter::~CudaColorSpaceConverter</a></div><div class="ttdeci">virtual ~CudaColorSpaceConverter()</div><div class="ttdef"><b>Definition:</b> cudacolorspaceconverter.cpp:28</div></div>
@@ -128,7 +128,7 @@ $(function() {
 <div class="ttc" id="aclassrr_1_1_cuda_color_space_converter_html_a90730cce254f7a39c4e92653208e525b"><div class="ttname"><a href="classrr_1_1_cuda_color_space_converter.html#a90730cce254f7a39c4e92653208e525b">rr::CudaColorSpaceConverter::CudaColorSpaceConverter</a></div><div class="ttdeci">CudaColorSpaceConverter(const std::shared_ptr&lt; ISettings &gt; settings)</div><div class="ttdoc">Construct a new CudaColorSpaceConverter instance.</div><div class="ttdef"><b>Definition:</b> cudacolorspaceconverter.cpp:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

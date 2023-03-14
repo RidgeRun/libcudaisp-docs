@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This class is in charge of the <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the CudaWhiteBalancer algorithm.">CudaWhiteBalancer</a> algorithm.  
+<p>This class is in charge of the White Balancer algorithm using CUDA.  
  <a href="classrr_1_1_cuda_white_balancer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="cudawhitebalancer_8hpp_source.html">cudawhitebalancer.hpp</a>&gt;</code></p>
@@ -82,7 +82,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e4f68dca09d4c98aae9f1686f6716eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_cuda_white_balancer.html#a8e4f68dca09d4c98aae9f1686f6716eb">CudaWhiteBalancer</a> (const std::shared_ptr&lt; <a class="el" href="classrr_1_1_i_settings.html">ISettings</a> &gt; settings)</td></tr>
-<tr class="memdesc:a8e4f68dca09d4c98aae9f1686f6716eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the CudaWhiteBalancer algorithm.">CudaWhiteBalancer</a> instance.  <a href="classrr_1_1_cuda_white_balancer.html#a8e4f68dca09d4c98aae9f1686f6716eb">More...</a><br /></td></tr>
+<tr class="memdesc:a8e4f68dca09d4c98aae9f1686f6716eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the White Balancer algorithm using CUDA.">CudaWhiteBalancer</a> instance.  <a href="classrr_1_1_cuda_white_balancer.html#a8e4f68dca09d4c98aae9f1686f6716eb">More...</a><br /></td></tr>
 <tr class="separator:a8e4f68dca09d4c98aae9f1686f6716eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fa0cee29229a6a9935488534819fa0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrr_1_1_runtime_error.html">rr::RuntimeError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrr_1_1_cuda_white_balancer.html#a2fa0cee29229a6a9935488534819fa0b">Apply</a> (const <a class="el" href="classrr_1_1_buffer.html">Buffer</a> *input_buffer, <a class="el" href="classrr_1_1_buffer.html">Buffer</a> *output_buffer, const std::shared_ptr&lt; <a class="el" href="classrr_1_1_i_params.html">IParams</a> &gt; params, bool async=false) override</td></tr>
 <tr class="memdesc:a2fa0cee29229a6a9935488534819fa0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies the automatic white balancing algorithm to the input buffer.  <a href="classrr_1_1_cuda_white_balancer.html#a2fa0cee29229a6a9935488534819fa0b">More...</a><br /></td></tr>
@@ -101,7 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3b09fe844d3eb5aff637a3051f3e2a59 inherit pub_methods_classrr_1_1_i_algorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class is in charge of the <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the CudaWhiteBalancer algorithm.">CudaWhiteBalancer</a> algorithm. </p>
+<div class="textblock"><p>This class is in charge of the White Balancer algorithm using CUDA. </p>
+<p>It performs White Balancing and it is constructed when passing kWhiteBalancer to the <a class="el" href="classrr_1_1_cuda_backend.html" title="This interface class manages the creation of CUDA Algorithms and CUDA Buffers.">CudaBackend</a></p>
 <p>Inherits from <a class="el" href="classrr_1_1_i_algorithm.html" title="This interface provides a way to apply algorithms to an image.">IAlgorithm</a>. This class can recieve an input RGB image, it then applies automatic white balancing to the image, and then produces an RGB output. It uses the NPP library from NVIDIA to provide CUDA acceleration to the algorithm. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8e4f68dca09d4c98aae9f1686f6716eb"></a>
@@ -128,7 +129,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the CudaWhiteBalancer algorithm.">CudaWhiteBalancer</a> instance. </p>
+<p>Construct a new <a class="el" href="classrr_1_1_cuda_white_balancer.html" title="This class is in charge of the White Balancer algorithm using CUDA.">CudaWhiteBalancer</a> instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">settings</td><td>: Settings required for the algorithm. </td></tr>
@@ -264,7 +265,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['emptylogger_230',['EmptyLogger',['../classrr_1_1_empty_logger.html',1,'rr']]]
+  ['emptylogger_266',['EmptyLogger',['../classrr_1_1_empty_logger.html',1,'rr']]]
 ];

@@ -76,9 +76,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="gstcudaawb_8hpp_source.html">gstcudaawb.hpp</a>&gt;</code><br />
+<code>#include &lt;cuda.h&gt;</code><br />
+<code>#include &lt;cuda_runtime.h&gt;</code><br />
 <code>#include &lt;gst/gst.h&gt;</code><br />
 <code>#include &lt;gst/video/video.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="gstcudatranslatebuffer_8hpp_source.html">gstcudatranslatebuffer.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="colorspaceparams_8hpp_source.html">libcudaisp/colorspaceparams.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="cudabufferparams_8hpp_source.html">libcudaisp/cudabufferparams.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="ibackend_8hpp_source.html">libcudaisp/ibackend.hpp</a>&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
@@ -92,9 +96,9 @@ Classes</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:adef911caed7c65a1643062817f4a59d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#adef911caed7c65a1643062817f4a59d7">GST_CAT_DEFAULT</a>&#160;&#160;&#160;gst_cuda_awb_debug_category</td></tr>
 <tr class="separator:adef911caed7c65a1643062817f4a59d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d94361908c10d64c283cf1faa32fedb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#a3d94361908c10d64c283cf1faa32fedb">FORMAT_CAPS</a>&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE(&quot;{RGB, BGR}&quot;)</td></tr>
+<tr class="memitem:a3d94361908c10d64c283cf1faa32fedb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#a3d94361908c10d64c283cf1faa32fedb">FORMAT_CAPS</a>&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE(&quot;{ RGB, BGR, I420 }&quot;)</td></tr>
 <tr class="separator:a3d94361908c10d64c283cf1faa32fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65f20402eb0f1ed690071925b381eb92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#a65f20402eb0f1ed690071925b381eb92">FORMAT_NVMM_CAPS</a>&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE_WITH_FEATURES(&quot;memory:NVMM&quot;, &quot;{RGB, BGR}&quot;)</td></tr>
+<tr class="memitem:a65f20402eb0f1ed690071925b381eb92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#a65f20402eb0f1ed690071925b381eb92">FORMAT_NVMM_CAPS</a>&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE_WITH_FEATURES(&quot;memory:NVMM&quot;, &quot;{ I420 }&quot;)</td></tr>
 <tr class="separator:a65f20402eb0f1ed690071925b381eb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abde99c00e2b897dfad1d2e4a040f8169"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gstcudaawb_8cpp.html#abde99c00e2b897dfad1d2e4a040f8169">FORMAT_AND_NVMM_CAPS</a>&#160;&#160;&#160;<a class="el" href="gstcudaawb_8cpp.html#a3d94361908c10d64c283cf1faa32fedb">FORMAT_CAPS</a> &quot;;&quot; <a class="el" href="gstcudaawb_8cpp.html#a65f20402eb0f1ed690071925b381eb92">FORMAT_NVMM_CAPS</a></td></tr>
 <tr class="separator:abde99c00e2b897dfad1d2e4a040f8169"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,7 +138,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FORMAT_CAPS&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE(&quot;{RGB, BGR}&quot;)</td>
+          <td class="memname">#define FORMAT_CAPS&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE(&quot;{ RGB, BGR, I420 }&quot;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -148,7 +152,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FORMAT_NVMM_CAPS&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE_WITH_FEATURES(&quot;memory:NVMM&quot;, &quot;{RGB, BGR}&quot;)</td>
+          <td class="memname">#define FORMAT_NVMM_CAPS&#160;&#160;&#160;GST_VIDEO_CAPS_MAKE_WITH_FEATURES(&quot;memory:NVMM&quot;, &quot;{ I420 }&quot;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -249,7 +253,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 7 2023 22:13:13 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 14 2023 20:22:00 for libcudaisp by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
